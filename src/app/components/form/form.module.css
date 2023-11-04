@@ -1,0 +1,54 @@
+.form {
+	flex: 6;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.input,
+.textarea {
+	background-color: transparent;
+	padding: 20px;
+	color: #bbb;
+	border: solid 3px #bbb;
+	font-weight: bold;
+}
+
+.sendFail,
+.sendSuccess {
+	transition: all 0.2s ease-in;
+	max-height: 0;
+	overflow: hidden;
+	line-height: 1.2;
+	margin: 0;
+}
+.sendFail {
+	color: red;
+}
+.show {
+	margin-top: 15px;
+	max-height: 50px;
+}
+.btn {
+	padding: 20px;
+	cursor: pointer;
+	background-color: #53c28b;
+	border: none;
+	border-radius: 5px;
+	width: max-content;
+	color: white;
+	font-size: 16px;
+}
+@media only screen and (max-width: 768px) {
+	.input,
+	.textarea {
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.form {
+		flex: none;
+		width: 100%;
+	}
+}

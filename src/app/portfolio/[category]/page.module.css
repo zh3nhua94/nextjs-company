@@ -1,0 +1,55 @@
+.catTitle {
+	color: #53c28b;
+}
+
+.item {
+	display: flex;
+	gap: 50px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.imgContainer {
+	flex: 6;
+	height: 500px;
+	position: relative;
+}
+
+.imgContainer img {
+	object-fit: cover;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	flex: 6;
+}
+
+.title {
+	font-size: 50px;
+}
+
+.desc {
+	font-size: 20px;
+}
+
+.container {
+	animation: fadeInAnimation ease 0.3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,100 @@
+.mainTitle {
+	font-size: 100px;
+}
+
+.selectTitle {
+	margin: 20px 0;
+}
+
+.items {
+	display: flex;
+	gap: 50px;
+}
+
+.item {
+	border: solid 5px #bbb;
+	border-radius: 5px;
+	width: 300px;
+	height: 400px;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.item:nth-child(1) {
+	background-image: url("/illustration.png");
+}
+
+.item:nth-child(2) {
+	background-image: url("/websites.jpg");
+}
+
+.item:nth-child(3) {
+	background-image: url("/apps.jpg");
+}
+
+.title {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.item:hover .title {
+	color: #53c28b;
+}
+
+.container {
+	animation: fadeInAnimation ease 0.3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.items {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	.item {
+		width: calc(33.33% - 30px);
+	}
+
+	.title {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.mainTitle {
+		font-size: 60px;
+	}
+
+	.item {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.mainTitle {
+		font-size: 30px;
+	}
+
+	.item {
+		height: 200px;
+	}
+
+	.selectTitle {
+		font-size: 1.2em;
+	}
+}

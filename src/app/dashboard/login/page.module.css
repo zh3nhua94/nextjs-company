@@ -1,0 +1,73 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.input {
+	padding: 20px;
+	background-color: transparent;
+	border: solid 2px #bbb;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #bbb;
+}
+
+.button {
+	padding: 20px;
+	cursor: pointer;
+	background-color: #53c28b;
+	border: none;
+	border-radius: 5px;
+	width: 300px;
+	color: white;
+	font-weight: bold;
+}
+
+.googleBtn {
+	padding: 20px;
+	cursor: pointer;
+	background-color: #53b5c2;
+	border: none;
+	border-radius: 5px;
+	width: 300px;
+	color: white;
+	font-weight: bold;
+	position: relative;
+}
+
+.googleBtn img {
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translate(0, -50%);
+	height: calc(100% - 10px);
+}
+.container {
+	animation: fadeInAnimation ease 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.togglePage:hover {
+	text-decoration: underline;
+}
