@@ -19,18 +19,22 @@
 	position: relative;
 	background-size: cover;
 	background-position: center;
+	color: white;
 }
 
 .item:nth-child(1) {
-	background-image: url("/illustration.png");
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+		url("/illustration.png");
 }
 
 .item:nth-child(2) {
-	background-image: url("/websites.jpg");
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+		url("/websites.jpg");
 }
 
 .item:nth-child(3) {
-	background-image: url("/apps.jpg");
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+		url("/apps.jpg");
 }
 
 .title {

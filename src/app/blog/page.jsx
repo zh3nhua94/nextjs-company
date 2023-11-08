@@ -20,9 +20,14 @@ async function getData() {
 
 const Blog = async () => {
 	const data = await getData();
+	const sortByDate = (a, b) => {
+		const aTime = new Date(a.createdAt).getTime();
+		const bTime = new Date(b.createdAt).getTime();
+		return bTime - aTime;
+	};
 	return (
 		<div className={styles.mainContainer}>
-			{data?.map((item) => (
+			{data?.sort(sortByDate).map((item) => (
 				<Link
 					key={item._id}
 					href={`/blog/${item._id}`}

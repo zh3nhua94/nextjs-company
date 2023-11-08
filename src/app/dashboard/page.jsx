@@ -62,6 +62,13 @@ const Dashboard = () => {
 			console.log(err);
 		}
 	};
+
+	const sortByDate = (a, b) => {
+		const aTime = new Date(a.createdAt).getTime();
+		const bTime = new Date(b.createdAt).getTime();
+		return bTime - aTime;
+	};
+
 	if (session.status === "authenticated") {
 		return (
 			<div className={styles.container}>
@@ -70,7 +77,7 @@ const Dashboard = () => {
 					{data?.length == 0 || !data ? (
 						<div className={styles.noFound}>No Posts found.</div>
 					) : (
-						data?.map((post) => (
+						data?.sort(sortByDate).map((post) => (
 							<div
 								className={styles.post}
 								key={post._id}
